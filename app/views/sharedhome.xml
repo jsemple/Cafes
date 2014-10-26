@@ -1,0 +1,16 @@
+<Alloy>
+	<View id="blurImg" platform="ios" />
+	<View class="container">
+		<TableView id="coffeeTable"> 
+			<HeaderView>
+				<View id="tblHdr">
+					<Label id="status" />
+					<ImageView id="foursquare"></ImageView>
+					<View id="softBanner" />
+					<Label id="info"></Label>
+					<ImageView id="refreshImg" />
+				</View>
+			</HeaderView>
+		</TableView>
+	</View>
+</Alloy>

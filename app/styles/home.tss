@@ -1,0 +1,20 @@
+"#win":{
+	backgroundImage: "/coffeebackground.png",
+	title: "Cafes"
+}
+
+"#win[platform=ios]":{
+	extendEdges: [Titanium.UI.EXTEND_EDGE_ALL],
+	barColor: "transparent",
+	statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT,
+	translucent: true,
+	navTintColor: '#ffffff',
+	includeOpaqueBars: false
+}
+
+"#win[platform=android]":{
+}
+
+".container":{
+	orientationModes: [Ti.UI.PORTRAIT]
+}

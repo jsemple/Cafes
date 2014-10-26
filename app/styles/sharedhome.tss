@@ -1,0 +1,62 @@
+"#blurImg[platform=ios]": {
+	backgroundImage: "/blurredcoffeebackground.png",
+	opacity: 0
+}
+
+"#foursquare": {
+	image: "/foursquare.png",
+	width: 64,
+	height: 8,
+	right: 5,
+	bottom: 55,
+	backgroundColor: "#55000000"
+}
+
+"#status": {
+	color: "#fff",
+	top: 0,
+	right:0,
+	font: { fontSize: 11 },
+	backgroundGradient: { type: 'linear',
+					 	  startPoint: { x: '100%', y: '50%' },
+					 	  endPoint: { x: '0%', y: '50%' },
+					 	  colors: [ { color: "#44000000", offset: 0.2 }, { color: "#00000000", offset: 0.8 } ] 
+					 	} 
+}
+
+"#tblHdr": {
+	height: Alloy.Globals.mainheight,
+}
+
+"#coffeeTable": {
+	backgroundColor: "transparent",
+	separatorColor: "#66ffffff",
+	color: "white",
+	rowHeight: 45
+}
+
+"#coffeeTable[platform=ios]": {
+	top: 64
+}
+
+"#softBanner": {
+	bottom: 5,
+	width: Ti.UI.FILL,
+	height: 45,
+	backgroundColor: "black",
+	opacity: 0.4
+}
+
+"#refreshImg": {
+	image: "/refresh.png",
+	bottom: 18,
+	right: 10,
+	height: 20,
+	width: 20	
+}
+
+"#info": {
+	color: "white",
+	bottom: 15,
+	left: 10
+}

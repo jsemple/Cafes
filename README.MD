@@ -1,13 +1,15 @@
+# Cafes
+
 Welcome to the Cafes app - finding the nearest coffee shop to you!
 
 This app leans heavily upon: -
 
-Ricardo Alcocer's cross-platform navigation template ... https://github.com/ricardoalcocer/AlloyAppTemplate
-The FourSquare API     https://developer.foursquare.com/start
-Google Static Map API  https://developers.google.com/maps/documentation/staticmaps/
+Ricardo Alcocer's cross-platform navigation template ... <https://github.com/ricardoalcocer/AlloyAppTemplate>  
+The FourSquare API     <https://developer.foursquare.com/start>  
+Google Static Map API  <https://developers.google.com/maps/documentation/staticmaps/>  
 
 
-QUICKSTART GUIDE TO THE CODE
+## QUICKSTART GUIDE TO THE CODE
 Index does nothing except open the platform specific home.xml files which in turn require sharedhome.xml.
 This allows us to keep the iOS navigation window component separate and means sharedhome is largely consistent
 across both platforms. 
@@ -18,14 +20,14 @@ Alloy.js uses some FourSquare API keys. It would be nice if people created their
 usage of the app (i.e. demos, etc) there should be no problem with everyone using my keys for the time being.
 
 
-USING THE APP
+## USING THE APP
 The app is simplicity itself: the first page takes the current location and queries for nearby coffee shops. It brings
 back a list of coffee shop names and distances (arbitrarily limited to the first 10). Clicking on any of these list items
 will take you to a detail page featuring a map and address of the shop. You can further link out to external map apps
 such as Apple Maps or Google Maps.
 
 
-TO DO
+## TO DO
 So this was done across a weekend and I had to be pragmatic in terms of what I had time to work on. There are plenty of
 features I wanted to add and didn't get the time for.
 

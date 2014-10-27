@@ -4,7 +4,7 @@
 <!-- feeding the sharedhome controller 																			-->
 <Alloy>
 	<NavigationWindow id="nav">
-		<Window id="win" class="container">
+		<Window id="win" class="container" onOpen="doOpen">
 			<Require src="sharedhome" id="sharedhome"/>
 
 		</Window>

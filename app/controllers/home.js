@@ -16,6 +16,7 @@ var banner = $.sharedhome.getView('softBanner');
 var refresh = $.sharedhome.getView('refreshImg');
 
 banner.addEventListener('dblclick', autoScroll);
+info.addEventListener('dblclick', autoScroll);
 tbl.addEventListener('click', tableClick);
 refresh.addEventListener('click', getCoffee);
 
@@ -23,10 +24,6 @@ refresh.addEventListener('click', getCoffee);
 if (OS_IOS) {
 	tbl.addEventListener('scroll', doScroll);
 }
-
-// PAGE STARTUP CODE
-getCoffee();
-
 
 
 function doOpen(evt){
@@ -36,6 +33,8 @@ function doOpen(evt){
 		abx.setBackgroundColor('#332413');
 		abx.setColor('#fff');
 	}
+	
+	getCoffee();
 }
 
 function doadd(evt){

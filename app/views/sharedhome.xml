@@ -7,7 +7,7 @@
 					<Label id="status" />
 					<ImageView id="foursquare"></ImageView>
 					<View id="softBanner" />
-					<Label id="info"></Label>
+					<Label id="info">Searching...</Label>
 					<ImageView id="refreshImg" />
 				</View>
 			</HeaderView>

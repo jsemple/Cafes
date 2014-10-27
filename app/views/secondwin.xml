@@ -13,7 +13,7 @@
 			</View>
 			<ImageView id="foursquare"></ImageView>
 			<View id="buttonBar">
-				<ImageView id="appleMapButton" class="iconButton" />
+				<ImageView id="appleMapButton" class="iconButton" platform="ios" />
 				<ImageView id="googleMapButton" class="iconButton" />
 			</View>
 		</View>

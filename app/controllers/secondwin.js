@@ -6,8 +6,6 @@ Ti.API.info(JSON.stringify(cafe));
 var ll = cafe.lat + "," + cafe.lng;
 $.staticMap.addEventListener('postlayout', setMap);
 
-getDetails();
-
 
 function closewin(evt){
 	$.secondwin.close();
@@ -21,6 +19,8 @@ function doopen(evt){
 	}
 	
 	$.secondwin.title = cafe.name;
+	
+	getDetails();
 }
 
 function setMap() {
@@ -45,7 +45,6 @@ function buildButtonBar() {
 	if(OS_IOS) {
 		// Add event handler to Apple Maps
 		$.appleMapButton.addEventListener('click', function() {
-			alert("You clicked this button!");
 			Ti.Platform.openURL("http://maps.apple.com/?ll=" + ll);
 		});
 		
@@ -59,25 +58,13 @@ function buildButtonBar() {
 				Ti.Platform.openURL("https://maps.google.com/maps?ll=" + ll + "&z=14");
 			});
 		}
-		$.buttonBar.visible = true;
 	} else if (OS_ANDROID) {
-		$.buttonBar.remove($.appleMapButton);
-		
 		$.googleMapButton.addEventListener('click', function() {
 			Ti.Platform.openURL("https://maps.google.com/maps?ll=" + ll + "&z=14");
-			
-			/*
-			var intent = Ti.Android.createIntent({
-			    action: Ti.Android.ACTION_VIEW,
-			    data: "geo:" + ll + "z=14"
-			});
-			intent.addCategory(Ti.Android.CATEGORY_LAUNCHER);
-			Ti.Android.currentActivity.startActivity(intent);
-			*/
 		});
-		
-		$.buttonBar.visible = true;
 	}
+	
+	$.buttonBar.visible = true;
 }
 
 function fillDetails(data) {

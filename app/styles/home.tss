@@ -12,9 +12,6 @@
 	includeOpaqueBars: false
 }
 
-"#win[platform=android]":{
-}
-
 ".container":{
 	orientationModes: [Ti.UI.PORTRAIT]
 }

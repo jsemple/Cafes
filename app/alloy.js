@@ -23,9 +23,11 @@ if (OS_IOS) {
 var h = Ti.Platform.displayCaps.platformHeight;
 var w = Ti.Platform.displayCaps.platformWidth;
 
+var divider = 1;
+
 // Fix android to get dimensions in dp
 if (OS_ANDROID) {
-	var divider = Ti.Platform.displayCaps.dpi/160;
+	divider = Ti.Platform.displayCaps.dpi/160;
 	
 	h = h / divider;
 	w = w / divider;

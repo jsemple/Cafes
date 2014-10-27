@@ -16,9 +16,6 @@
 	includeOpaqueBars: false
 }
 
-"#secondwin[platform=android]":{
-}
-
 "#foursquare": {
 	image: "/foursquare.png",
 	width: 64,

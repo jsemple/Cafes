@@ -40,7 +40,7 @@ function doOpen(evt){
 function doadd(evt){
 	if (OS_IOS){
 		$.nav.openWindow(Alloy.createController('secondwin').getView());
-	}else if (OS_ANDROID){
+	} else if (OS_ANDROID){
 		Alloy.createController('secondwin').getView().open();
 	}
 }

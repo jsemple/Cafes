@@ -62,7 +62,7 @@
     </ios>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
         <manifest>
-            <application android:theme="@style/Light">
+            <application android:theme="@style/Dark">
                 <activity
                     android:configChanges="keyboardHidden|orientation"
                     android:label="Cafes" android:name=".CafesActivity" android:theme="@style/Theme.Titanium">

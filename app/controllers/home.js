@@ -147,5 +147,5 @@ function fillTable(data) {
 }
 
 function handleError(err) {
-	$.info.text = err;
+	info.text = err;
 }

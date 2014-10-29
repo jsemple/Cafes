@@ -19,6 +19,7 @@ banner.addEventListener('dblclick', autoScroll);
 info.addEventListener('dblclick', autoScroll);
 tbl.addEventListener('click', tableClick);
 refresh.addEventListener('click', getCoffee);
+refresh.addEventListener('longpress', raiseException);
 
 // Special table scroll handling for iOS
 if (OS_IOS) {
@@ -51,15 +52,29 @@ function statusUpdated() {
 }
 
 function getCoffee() {
-	// Set info message
-	info.text = "Searching...";
-	
-	// Clear results table
-	tbl.data = [];
-	
-	// Get local coffee shops!
-	Ti.API.info("calling coffeeservice!!");
-	require('coffeeservice').fetchCoffee(fillTable, handleError);
+	if (Ti.Network.online) {
+		// Set info message
+		info.text = "Searching...";
+		
+		// Clear results table
+		tbl.data = [];
+		
+		// Get local coffee shops!
+		Ti.API.info("calling coffeeservice!!");
+		require('coffeeservice').fetchCoffee(fillTable, handleError);
+	} else {
+		info.text = "Not online";
+	}
+}
+
+function raiseException() {
+	try {
+	    var err = new Error('LONGPRESS: Manual exception raised!');
+	    if (value === null || value === undefined) throw err;
+	}
+	catch (err) {
+	    Alloy.Globals.apm.logHandledException(err);
+	}
 }
 
 function autoScroll() {

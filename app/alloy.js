@@ -10,6 +10,11 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 
+// Initialise Appcelerator Performance Management
+Alloy.Globals.apm = require("com.appcelerator.apm");
+Alloy.Globals.apm.init();
+
+// Store Foursquare details in globals
 Alloy.Globals.foursquareID = "50T5LY0MC350LNLMHF0GK10UDKXKFZRZWVCHSPGDN0CHKKIJ";
 Alloy.Globals.foursquareSecret = "DEAFMXUDD4B4OCEQAZ255BK13WEHHKBRRM1RNWWOWGW0PDXL";
 

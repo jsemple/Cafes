@@ -73,6 +73,7 @@ function raiseException() {
 	    if (value === null || value === undefined) throw err;
 	}
 	catch (err) {
+		alert('Manual exception');
 	    Alloy.Globals.apm.logHandledException(err);
 	}
 }

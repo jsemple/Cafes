@@ -3,7 +3,7 @@ exports.fetchCoffee = function(callback, errcallback) {
 	var secret = Alloy.Globals.foursquareSecret;
 	
 	// Record action
-	Ti.Analytics.fireEvent("coffee-request");
+	Ti.Analytics.featureEvent("coffee-request");
 	Alloy.Globals.apm.leaveBreadcrumb('Make coffee request');
 	
 	// Get my geo data
@@ -40,7 +40,7 @@ exports.fetchCoffee = function(callback, errcallback) {
 			    	Ti.API.info("Received text: " + this.responseText);
 			    	
 			    	// Record action
-					Ti.Analytics.fireEvent("coffee-data-received");
+					Ti.Analytics.featureEvent("coffee-data-received");
 					Alloy.Globals.apm.leaveBreadcrumb('Received coffee data');
 	
 			        // Pass data to callback
@@ -52,7 +52,7 @@ exports.fetchCoffee = function(callback, errcallback) {
 			        errcallback(e.error);
 			        
 			        // Record action
-					Ti.Analytics.fireEvent("coffee-data-error");
+					Ti.Analytics.featureEvent("coffee-data-error");
 					Alloy.Globals.apm.leaveBreadcrumb('Error with coffee data');
 			    },
 			    timeout : 5000  // in milliseconds
@@ -74,7 +74,7 @@ exports.getDetails = function(venueId, callback, errcallback) {
 	var secret = Alloy.Globals.foursquareSecret;
 	
 	// Record action
-	Ti.Analytics.fireEvent("coffee-details-request");
+	Ti.Analytics.featureEvent("coffee-details-request");
 	Alloy.Globals.apm.leaveBreadcrumb('Make coffee details request');
 	
 	var url = "https://api.foursquare.com/v2/venues/" + venueId +
@@ -86,7 +86,7 @@ exports.getDetails = function(venueId, callback, errcallback) {
 		// function called when the response data is available
 	    onload : function(e) {
 	    	// Record action
-			Ti.Analytics.fireEvent("coffee-data-details-received");
+			Ti.Analytics.featureEvent("coffee-data-details-received");
 			Alloy.Globals.apm.leaveBreadcrumb('Received coffee details data');
 	    	
 	    	Ti.API.info("Received text: " + this.responseText);

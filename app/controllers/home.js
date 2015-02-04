@@ -29,21 +29,13 @@ if (OS_IOS) {
 
 function doOpen(evt){
 	if (OS_ANDROID){
-		// Sort out action bar properties here
+		// Configure action bar properties here
 		var abx=require('com.alcoapps.actionbarextras');
 		abx.setBackgroundColor('#332413');
 		abx.setColor('#fff');
 	}
 	
 	getCoffee();
-}
-
-function doadd(evt){
-	if (OS_IOS){
-		$.nav.openWindow(Alloy.createController('secondwin').getView());
-	} else if (OS_ANDROID){
-		Alloy.createController('secondwin').getView().open();
-	}
 }
 
 function statusUpdated() {
@@ -53,6 +45,11 @@ function statusUpdated() {
 
 function getCoffee() {
 	if (Ti.Network.online) {
+		if (OS_IOS) {
+			var blurImg = $.sharedhome.getView('blurImg');
+			blurImg.opacity = 0;
+		}
+		
 		// Set info message
 		info.text = "Searching...";
 		
@@ -61,7 +58,7 @@ function getCoffee() {
 		
 		// Get local coffee shops!
 		Ti.API.info("calling coffeeservice!!");
-		require('coffeeservice').fetchCoffee(fillTable, handleError);
+		require('localcoffeeservice').fetchCoffee(fillTable, handleError);
 	} else {
 		info.text = "Not online";
 	}
@@ -74,7 +71,7 @@ function raiseException() {
 	}
 	catch (err) {
 		alert('Manual exception');
-	    Alloy.Globals.apm.logHandledException(err);
+	    Alloy.Globals.logHandledException(err);
 	}
 }
 

@@ -1,0 +1,25 @@
+{
+  "name": "coffeeService",
+  "version": "0.1.0",
+  "description": "",
+  "framework": "mvc",
+  "bodyParser": true,
+  "main": "app.js",
+  "service": {"env_id":"","org_id":"100000519"},
+  "keywords": [
+  ],
+  "author": "",
+  "maintainers": [
+  ],
+  "contributors": [
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "preferGlobal": false,
+  "dependencies": {
+  },
+  "license":"",
+  "private": true
+}

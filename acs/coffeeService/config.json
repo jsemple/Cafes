@@ -1,0 +1,22 @@
+{
+    "routes": [ {
+        "path": "/",
+        "callback": "application#index"
+    }, {
+        "path": "/getCoffee",
+        "method": "get",
+        "callback": "services#getCoffee"
+    }, {
+        "path": "/getDetails",
+        "method": "get",
+        "callback": "services#getDetails"
+    } ],
+    "filters": [ {
+        "path": "/",
+        "callback": ""
+    } ],
+    "websockets": [ {
+        "event": "",
+        "callback": ""
+    } ]
+}

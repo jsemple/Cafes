@@ -11,8 +11,22 @@
 // Alloy.Globals.someGlobalFunction = function(){};
 
 // Initialise Appcelerator Performance Management
-Alloy.Globals.apm = require("com.appcelerator.apm");
-Alloy.Globals.apm.init();
+if (OS_IOS || OS_ANDROID) {
+	Alloy.Globals.apm = require("com.appcelerator.apm");
+	Alloy.Globals.apm.init();
+}
+
+Alloy.Globals.logHandledException = function(err) {
+	if (OS_IOS || OS_ANDROID) {
+		Alloy.Globals.apm.logHandledException(err);
+	}
+};
+
+Alloy.Globals.leaveBreadcrumb = function(msg) {
+	if (OS_IOS || OS_ANDROID) {
+		Alloy.Globals.apm.leaveBreadcrumb(msg);
+	}
+};
 
 // Store Foursquare details in globals
 Alloy.Globals.foursquareID = "50T5LY0MC350LNLMHF0GK10UDKXKFZRZWVCHSPGDN0CHKKIJ";

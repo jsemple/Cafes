@@ -1,0 +1,10 @@
+<!-- This is your MobileWeb view.  Could contain any MobileWeb-specific UI controls.  The content of the     	-->
+<!-- Window is being included via the Require tag, in case you wish to keep the contents reusable				-->
+<!-- In this example, we have a single, cross-platform home.js, which will take care of  						-->
+<!-- feeding the sharedhome controller 																			-->
+<Alloy>
+		<Window id="win" class="container" onOpen="doOpen">
+			<Require src="sharedhome" id="sharedhome"/>
+
+		</Window>
+</Alloy>

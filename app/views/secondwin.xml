@@ -8,7 +8,7 @@
 		<View id="opaqueView" />
 		<View id="mainView">
 			<View id="innerView">
-				<ImageView id="staticMap"/>
+				<ImageView id="staticMap" />
 				<Label id="address"></Label>
 			</View>
 			<ImageView id="foursquare"></ImageView>

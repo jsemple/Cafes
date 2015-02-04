@@ -38,7 +38,7 @@ function setMap() {
 
 function getDetails() {
 	// Call Foursquare VENUES API to grab venue details
-	require('coffeeservice').getDetails(cafe.id, fillDetails, handleError);
+	require('localcoffeeservice').getDetails(cafe.id, fillDetails, handleError);
 }
 
 function buildButtonBar() {
